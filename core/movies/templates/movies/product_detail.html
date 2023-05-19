@@ -1,0 +1,10 @@
+{% load cache %}
+
+<h1>{{ product.name }}</h1>
+<p>Price: ${{ product.price }}</p>
+<p>{{ product.description }}</p>
+
+{% cache 60 * 1 product_id %}
+    <!-- Cached content here -->
+    <p>This content will be cached for 1 minutes.</p>
+{% endcache %}

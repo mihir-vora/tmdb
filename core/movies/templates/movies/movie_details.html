@@ -1,0 +1,11 @@
+<!-- movie_details.html -->
+
+{% if movie %}
+  <h2>{{ movie.title }}</h2>
+  <p>Release Date: {{ movie.release_date }}</p>
+  <p>Overview: {{ movie.overview }}</p>
+  <p>Popularity: {{ movie.popularity }}</p>
+  <!-- Add more fields as needed -->
+{% else %}
+  <p>Movie details not available.</p>
+{% endif %}
